@@ -1,0 +1,8 @@
+datasets/
+__pycache__/
+outputs/
+*.h5
+*.keras
+*.zip
+*.rar
+*.7z
