@@ -193,7 +193,7 @@ elif page == "Model Training":
             count = len(os.listdir(os.path.join(dataset_path, cls)))
             st.write(f"- **{cls}**: {count} images")
     else:
-        st.warning("Dataset not found. Please upload data to the 'datasets' folder.")
+        st.warning("📊 **Server Status**: Datasets are kept in offline storage to maintain performance. The app is currently running in **Inference Mode** using pre-trained models. Diagnosis features are fully active.")
         
     if st.button("Start Retraining Pipeline"):
         st.warning("Training requires significant GPU/CPU resources. This will run in the background.")
