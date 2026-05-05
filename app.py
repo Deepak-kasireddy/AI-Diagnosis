@@ -132,14 +132,14 @@ elif page == "Diagnosis":
                 else:
                     prediction, confidence, severity, heatmap_path = predict_blood_smear(img_path, "outputs")
                     
-                    clinical_notes = get_clinical_notes(prediction, severity)
-                    
-                    # Load the generated visualization
-                    visualized_img = cv2.imread(heatmap_path)
-                    visualized_img = cv2.cvtColor(visualized_img, cv2.COLOR_BGR2RGB)
-                    
-                    with col2:
-                        st.image(visualized_img, caption="AI Analysis (Heatmap Overlay)", use_container_width=True)
+                clinical_notes = get_clinical_notes(prediction, severity)
+                
+                # Load the generated visualization
+                visualized_img = cv2.imread(heatmap_path)
+                visualized_img = cv2.cvtColor(visualized_img, cv2.COLOR_BGR2RGB)
+                
+                with col2:
+                    st.image(visualized_img, caption="AI Analysis (Heatmap Overlay)", use_container_width=True)
                 
                 st.markdown("---")
                 
